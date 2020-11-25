@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>シャッフルリスト</title>
+</head>
+<body>
+    <article>
+    <h1>シャッフルリスト</h1>
+    <div id="app">
+        <transition-group name="flip-list" tag="ul">
+            <li v-for="pref in prefs" v-bind:key="pref.name">{{ pref.name }}</li>
+        </transition-group>
+    </ul>
+        <button v-on:click="shuffle">シャッフル</button>
+        <p>シャッフルボタンを押すと並び替わります。</p>
+    </div>
+</article>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
+    <script src="js/list.js"></script>
+
+</body>
+</html>
